@@ -1,32 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Labb3_NET22.DataModels;   
+namespace Labb3_NET22.DataModels;
 
 public class Quiz
 {
-    private IEnumerable<Question> _questions;
-    private string _title = string.Empty;
-    public IEnumerable<Question> Questions => _questions;
-    public string Title => _title;
+    public string Title { get; set; }
+    public List<Question> Questions { get; set; }
+    public Random Randomizer { get; set; }
 
-    public Quiz()
+    public Quiz(string title = "")
     {
-        _questions = new List<Question>();
-    }
+        Title = title;
+        Questions = new List<Question>();
+        Randomizer = new Random();
 
+    }
     public Question GetRandomQuestion()
     {
-        throw new NotImplementedException("A random Question needs to be returned here!");
-    }
+        int index = Randomizer.Next(0, Questions.Count);
+        return Questions[index];
 
+    }
     public void AddQuestion(string statement, int correctAnswer, params string[] answers)
     {
-        throw new NotImplementedException("Question need to be instantiated and added to list of questions here!");
+        Question q = new Question(statement, correctAnswer, answers);
+        Questions.Add(q);
     }
-
     public void RemoveQuestion(int index)
     {
-        throw new NotImplementedException("Question at requested index need to be removed here!");
+
     }
 }
