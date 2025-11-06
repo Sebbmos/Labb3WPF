@@ -1,3 +1,4 @@
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Labb3_NET22
@@ -8,6 +9,18 @@ namespace Labb3_NET22
         {
             InitializeComponent();
             DataContext = sw;
+        }
+
+        private void BackToMenu_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow != null)
+            {
+
+                mainWindow.ShowMainMenu();
+            }
+
+
         }
     }
 }

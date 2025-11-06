@@ -10,7 +10,35 @@ namespace Labb3_NET22
         public MainWindow()
         {
             InitializeComponent();
+            ShowMainMenu();
+        }
+
+        public void ShowMainMenu()
+        {
+
+            MainContent.Content = null;
+        }
+
+
+        private void PlayQuiz_Click(object sender, RoutedEventArgs e)
+        {
             this.Content = new Labb3_NET22.PlayQuiz.PlayQuizView();
         }
+
+        private void EditQuiz_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreateQuiz_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExitQuiz_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
     }
 }
