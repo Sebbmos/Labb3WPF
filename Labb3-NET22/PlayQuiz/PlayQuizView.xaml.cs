@@ -1,108 +1,40 @@
-﻿using Labb3_NET22.DataModels;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace Labb3_NET22.PlayQuiz
 {
     /// <summary>
     /// Interaction logic for PlayQuizView.xaml
     /// </summary>
-    public class PlayQuizViewModel : INotifyPropertyChanged
+    public partial class PlayQuizView : UserControl
     {
-        public Quiz Quiz { get; set; }
-        public Question CurrentQuestion { get; set; }
-        public int SelectedAnswerIndex { get; set; }
-        public int CorrectAnswers { get; set; }
-        public int TotalAnswerd { get; set; }
-
-        public bool isFinished = false;
-
-        public List<Question> QuestionAnswerd = new List<Question>();
-
-        public string ScoreText
+        public PlayQuizViewModel ViewModel { get; set; }
+        public PlayQuizView()
         {
-            get
-            {
-                int percent = 0;
-                if (TotalAnswerd > 0)
-                {
-                    percent = (int)((double)CorrectAnswers / TotalAnswerd * 100);
-                }
-                return $"Rätt: {CorrectAnswers} / {TotalAnswerd} ({percent}%)";
-            }
+            InitializeComponent();
+            ViewModel = new PlayQuizViewModel();
+            DataContext = ViewModel;
         }
 
-        public PlayQuizViewModel()
+        public void AnswerButton_Click(Object sender, RoutedEventArgs e)
         {
-            Quiz = new Quiz("TestQuiz");
-            Quiz.AddQuestion("hur många liv sägs det att en katt har?", 1, "1", "9", "7", "4");
-            Quiz.AddQuestion("Vem spelar Jack i filmen Titanic?", 3, "Brad Pitt", "Christopher Nolan", "Leonardo DiCaprio", "Robin Kamo");
-            Quiz.AddQuestion("Vad heter karaktären som dödar Qui-Gon Jinn i filmen Star Wars Phantom Menace?", 1, "Boba Fett", "Darth Maul", "Darth Sidious", "Anakin Skywalker");
-            Quiz.AddQuestion("Vad står WPF för?", 3, "Windows Presentation Fixer", "Windowed Presentation Formula", "Whatever Presentation Founder", "Windows Presentation Foundation");
+            Button button = sender as Button;
+            int selectedIndex = int.Parse(button.Tag.ToString());
+            ViewModel.NextQuestion(selectedIndex);
 
-            CurrentQuestion = Quiz.GetRandomQuestion();
-            SelectedAnswerIndex = -1;
-            OnPropertyChange("CurrentQuestion");
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChange([CallerMemberName] string name = "")
-        {
-            if (PropertyChanged != null)
+            if (ViewModel.isFinished)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
-        }
-
-        public void NextQuestion(int selectedIndex)
-        {
-            TotalAnswerd++;
-            if (CurrentQuestion.IsCorrect(selectedIndex))
-            {
-                CorrectAnswers++;
-            }
-
-            QuestionAnswerd.Add(CurrentQuestion);
-
-            bool isUsed = true;
-
-            while (isUsed)
-            {
-                CurrentQuestion = Quiz.GetRandomQuestion();
-
-                var nextQuest = QuestionAnswerd.Any(q => q.Statement == CurrentQuestion.Statement);
-
-                if (QuestionAnswerd.Count == Quiz.Questions.Count)
+                if (Application.Current.MainWindow is MainWindow mw)
                 {
-                    isFinished = true;
-                    isUsed = false;
-                    break;
-                }
-
-                if (nextQuest == true)
-                {
-                    CurrentQuestion = Quiz.GetRandomQuestion();
+                    mw.Content = new Labb3_NET22.ScoreWindowView(ViewModel);
 
                 }
-                else
-                {
-                    isUsed = false;
-                    break;
-                }
-
             }
-
-
-
-            OnPropertyChange("CurrentQuestion");
-            OnPropertyChange("ScoreText");
-
         }
-
 
 
     }
+
+
 }
