@@ -13,11 +13,9 @@ namespace Labb3_NET22
 
         private void BackToMenu_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            var mainWindow = Window.GetWindow(this) as MainWindow;
-            if (mainWindow != null)
+            if (Application.Current.MainWindow is MainWindow mw)
             {
-
-                mainWindow.ShowMainMenu();
+                mw.RestoreInitialContent();
             }
 
 

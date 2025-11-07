@@ -7,18 +7,18 @@ namespace Labb3_NET22
     /// </summary>
     public partial class MainWindow : Window
     {
+        private object _initialContent;
+
         public MainWindow()
         {
             InitializeComponent();
-            ShowMainMenu();
+            _initialContent = this.Content;
         }
 
-        public void ShowMainMenu()
+        public void RestoreInitialContent()
         {
-
-            MainContent.Content = null;
+            this.Content = _initialContent;
         }
-
 
         private void PlayQuiz_Click(object sender, RoutedEventArgs e)
         {
@@ -27,12 +27,12 @@ namespace Labb3_NET22
 
         private void EditQuiz_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Content = new Labb3_NET22.Quizmenu.EditQuiz();
         }
 
         private void CreateQuiz_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Content = new Labb3_NET22.Quizmenu.CreateQuiz();
         }
 
         private void ExitQuiz_Click(object sender, RoutedEventArgs e)

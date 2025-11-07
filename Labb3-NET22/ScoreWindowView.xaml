@@ -12,7 +12,9 @@
         </LinearGradientBrush>
     </UserControl.Background>
     <Grid Margin="20">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Ditt resultat!" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
             <TextBlock Text="{Binding ScoreText}" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10"/>
@@ -25,7 +27,7 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </StackPanel>
-        <Button Content="Menu" Margin="299,0,0,234" Background="#FF38EADD" Click="BackToMenu_Click" />
+        <Button Content="Menu" Grid.Row="0" Margin="299,0,0,234" Background="#FF38EADD" Click="BackToMenu_Click" HorizontalAlignment="Right" Padding="5" />
 
     </Grid>
 </UserControl>
