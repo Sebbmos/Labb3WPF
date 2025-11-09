@@ -1,0 +1,60 @@
+{
+  "Title": "Pokemon Quiz",
+  "Questions": [
+    {
+      "Statement": "What is the name of the main character in the original Pok\u00E9mon anime?",
+      "Answers": [
+        "Gary",
+        "Ash Ketchum",
+        "Brock"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "Which Pok\u00E9mon is known as the \u201CMascot\u201D of the franchise?",
+      "Answers": [
+        "Charmander",
+        "Bulbasaur",
+        "Pikachu"
+      ],
+      "CorrectAnswer": 2
+    },
+    {
+      "Statement": "What are the first Pok\u00E9mon games released internationally?",
+      "Answers": [
+        "Gold and Silver",
+        "Red and Blue",
+        "Ruby and Sapphire"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "What type is Pikachu?",
+      "Answers": [
+        "Fire",
+        "Electric",
+        "Normal"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "What device do Trainers use to catch Pok\u00E9mon?",
+      "Answers": [
+        "Digiball",
+        "Pok\u00E9 Ball",
+        "Capture Cube"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "What is the goal of most Pok\u00E9mon Trainers in the games?",
+      "Answers": [
+        "To become a Gym Leader",
+        "To become the Pok\u00E9mon Champion",
+        "To catch only Legendary pok\u00E9mon"
+      ],
+      "CorrectAnswer": 1
+    }
+  ],
+  "Randomizer": {}
+}

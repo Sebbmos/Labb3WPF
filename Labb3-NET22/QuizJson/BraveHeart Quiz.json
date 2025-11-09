@@ -1,0 +1,60 @@
+{
+  "Title": "BraveHeart Quiz",
+  "Questions": [
+    {
+      "Statement": "Who plays the main role, William Wallace?",
+      "Answers": [
+        "Mel Gibson",
+        "Liam Neeson",
+        "Russel Crowe"
+      ],
+      "CorrectAnswer": 0
+    },
+    {
+      "Statement": "In which country does most of the film take place?",
+      "Answers": [
+        "Ireland",
+        "Scotland",
+        "England"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "Which historical conflict is the film loosely based on?",
+      "Answers": [
+        "The scottish wars of indepedence",
+        "The hundred years war",
+        "The wars of Roses"
+      ],
+      "CorrectAnswer": 0
+    },
+    {
+      "Statement": "What happens to Wallace\u2019s wife, Murron, in the film?",
+      "Answers": [
+        "She escapes to Ireland",
+        "She is executed",
+        "She marries an English nobleman"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "What is William Wallace\u2019s famous cry at the end of the film?",
+      "Answers": [
+        "Justice!",
+        "Freedom!",
+        "For Scotland!"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "Who directed Braveheart?",
+      "Answers": [
+        "Ridley Scott",
+        "Mel Gibson",
+        "Ron Howard"
+      ],
+      "CorrectAnswer": 1
+    }
+  ],
+  "Randomizer": {}
+}
