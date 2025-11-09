@@ -1,0 +1,60 @@
+{
+  "Title": "Street Fighter Quiz",
+  "Questions": [
+    {
+      "Statement": "Who is the main Japanese martial artist often considered the series\u2019 protagonist?",
+      "Answers": [
+        "Ken",
+        "Ryu",
+        "Guile"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "What is Ryu\u2019s signature special move called?",
+      "Answers": [
+        "Sonic Boom",
+        "Hadouken",
+        "Tatsumaki Senpukyaku"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "Which character is a U.S. Air Force major with a flat-top haircut?",
+      "Answers": [
+        "Balrog",
+        "Guile",
+        "Zangief"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "What is the name of the evil organization led by M. Bison?",
+      "Answers": [
+        "Shadow Force",
+        "Shadaloo",
+        "Black Fist"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "Which fighter is known for her fast kicks and wears a blue qipao?",
+      "Answers": [
+        "Cammy",
+        "Chun-Li",
+        "Sakura"
+      ],
+      "CorrectAnswer": 1
+    },
+    {
+      "Statement": "In most games, how do you win a round?",
+      "Answers": [
+        "By collecting items",
+        "By depliting the opponents health bar",
+        "By blocking for 30 seconds"
+      ],
+      "CorrectAnswer": 1
+    }
+  ],
+  "Randomizer": {}
+}

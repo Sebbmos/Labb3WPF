@@ -18,7 +18,7 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Ditt resultat!" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
             <TextBlock Text="{Binding ScoreText}" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-            <!-- Optional: show more details -->
+            
             <ItemsControl ItemsSource="{Binding QuestionAnswerd}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>

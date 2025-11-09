@@ -14,14 +14,14 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Välj ett quiz att spela" FontSize="20" Margin="0,0,0,12"/>
+            <TextBlock Text="Choose your quiz to play" FontSize="20" Margin="0,0,0,12"/>
 
             <ListBox x:Name="FilesList" Grid.Row="1" Height="220" />
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,12,0,0">
-                <Button Content="Uppdatera" Width="120" Click="Refresh_Click"/>
-                <Button Content="Starta"    Width="120" Margin="8,0,0,0" Click="Start_Click"/>
-                <Button Content="Tillbaka"  Width="120" Margin="8,0,0,0" Click="Back_Click"/>
+                <Button Content="Update" Width="120" Click="Refresh_Click"/>
+                <Button Content="Start Quiz"    Width="120" Margin="8,0,0,0" Click="Start_Click"/>
+                <Button Content="Back"  Width="120" Margin="8,0,0,0" Click="Back_Click"/>
             </StackPanel>
         </Grid>
     </Border>

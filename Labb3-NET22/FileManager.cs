@@ -12,7 +12,7 @@ namespace Labb3_NET22
     {
         //public static string Folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SavedQuizes");
         public static string Folder = Path.GetFullPath(
-    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\QuizJson")
+    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\QuizJson")  //ny directory så att json sparas i repomappen
 );
         public static async Task SaveQuiz(Quiz quiz)
         {

@@ -33,7 +33,7 @@ namespace Labb3_NET22
             }
         }
 
-        public PlayQuizViewModel()
+        public PlayQuizViewModel()   //gammalt demo används inte i applikationen
         {
             Quiz = new Quiz("TestQuiz");
             Quiz.AddQuestion("hur många liv sägs det att en katt har?", 1, "1", "9", "7", "4");

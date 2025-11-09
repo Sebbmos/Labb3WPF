@@ -39,7 +39,7 @@ namespace Labb3_NET22
 
             if (Application.Current.MainWindow is MainWindow mw)
             {
-                mw.StartPlayWithQuiz(quiz);  // definieras i steg 3
+                mw.StartPlayWithQuiz(quiz);
             }
         }
 
