@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Labb3_NET22.PlayQuiz_SelectQuizView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Labb3_NET22"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Padding="16">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Välj ett quiz att spela" FontSize="20" Margin="0,0,0,12"/>
+
+            <ListBox x:Name="FilesList" Grid.Row="1" Height="220" />
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,12,0,0">
+                <Button Content="Uppdatera" Width="120" Click="Refresh_Click"/>
+                <Button Content="Starta"    Width="120" Margin="8,0,0,0" Click="Start_Click"/>
+                <Button Content="Tillbaka"  Width="120" Margin="8,0,0,0" Click="Back_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

@@ -133,17 +133,17 @@ namespace Labb3_NET22.Quizmenu
 
         }
 
-        // Ensure that the class name in EditQuiz.xaml matches the code-behind class name (EditQuizView).
-        // The partial class EditQuizView must match the x:Class attribute in EditQuiz.xaml.
-        // If the .g.cs file is missing, rebuild the project to regenerate it.
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
 
-        // If you created EditQuiz.xaml manually, make sure it contains:
-        // <UserControl x:Class="Labb3_NET22.Quizmenu.EditQuizView" ... >
+        }
 
-        // No code changes are needed in this file if the above is correct.
-        // If you still get CS0103, right-click the project and select "Rebuild" in Visual Studio.
-
-        // If you want to define InitializeComponent manually (not recommended), add:
-        // private void InitializeComponent() { }
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow is MainWindow mw)
+            {
+                mw.RestoreInitialContent();
+            }
+        }
     }
 }

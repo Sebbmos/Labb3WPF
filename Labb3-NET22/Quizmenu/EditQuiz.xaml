@@ -19,18 +19,18 @@
 
             <!-- Left: files + question list -->
             <StackPanel Grid.Column="0" Grid.Row="0">
-                <TextBlock Text="Öppna" FontSize="20" Margin="0,0,0,8"/>
-                <Button Content="Öppna quiz-fil..." Width="160" Click="Open_Click"/>
+                <TextBlock Text="Open" FontSize="20" Margin="0,0,0,8"/>
+                <Button Content="Open quiz file..." Width="160" Click="Open_Click"/>
                 <ListBox x:Name="FilesList" Height="140" Margin="0,8,0,0"/>
-                <Button Content="Ladda markerad" Width="160" Click="LoadSelected_Click" Margin="0,8,0,8"/>
+                <Button Content="Load marked" Width="160" Click="LoadSelected_Click" Margin="0,8,0,8"/>
                 <Separator/>
-                <TextBlock Text="Frågor" FontSize="16" Margin="0,8,0,4"/>
+                <TextBlock Text="Questions" FontSize="16" Margin="0,8,0,4"/>
                 <ListBox x:Name="QuestionsList" Height="180" SelectionChanged="QuestionsList_SelectionChanged"/>
             </StackPanel>
 
-            <!-- Right: editor -->
+            
             <StackPanel Grid.Column="1" Grid.Row="0">
-                <TextBlock Text="Redigera fråga" FontSize="20" Margin="0,0,0,8"/>
+                <TextBlock Text="Edit question" FontSize="20" Margin="0,0,0,8"/>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
                     <TextBlock VerticalAlignment="Center" Text="Titel:" Width="60"/>
                     <TextBox x:Name="TitleBox" Width="300"/>
@@ -58,10 +58,11 @@
                 </StackPanel>
             </StackPanel>
 
-            <!-- Right footer -->
+            
             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,12,0,0">
-                <Button Content="Uppdatera" Width="120" Click="Update_Click"/>
-                <Button Content="Spara" Width="120" Margin="8,0,0,0" Click="Save_Click"/>
+                <Button Content="Update" Width="120" Click="Update_Click"/>
+                <Button Content="Save" Width="120" Margin="8,0,0,0" Click="Save_Click"/>
+                <Button Content="Back" Width="120" Margin="8,0,0,0" Click="Back_Click" />
             </StackPanel>
         </Grid>
     </Border>

@@ -10,10 +10,10 @@ namespace Labb3_NET22.PlayQuiz
     public partial class PlayQuizView : UserControl
     {
         public PlayQuizViewModel ViewModel { get; set; }
-        public PlayQuizView()
+        public PlayQuizView(Labb3_NET22.DataModels.Quiz quiz)
         {
             InitializeComponent();
-            ViewModel = new PlayQuizViewModel();
+            ViewModel = new PlayQuizViewModel(quiz);
             DataContext = ViewModel;
         }
 

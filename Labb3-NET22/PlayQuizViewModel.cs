@@ -44,7 +44,13 @@ namespace Labb3_NET22
             SelectedAnswerIndex = -1;
             OnPropertyChange("CurrentQuestion");
         }
-
+        public PlayQuizViewModel(Quiz quiz)
+        {
+            Quiz = quiz;
+            SelectedAnswerIndex = -1;
+            CurrentQuestion = Quiz.GetRandomQuestion();
+            OnPropertyChange("CurrentQuestion");
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChange([CallerMemberName] string name = "")
